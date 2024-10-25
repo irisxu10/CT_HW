@@ -70,12 +70,12 @@ function draw() {
         }
 
         // 检查掉落逻辑
-        if (enemies[i] && enemies[i].y > height) { // 确保敌人存在
+        if (enemies[i] && enemies[i].y > height) { // 敌人存在
             if (enemies[i] instanceof EnemyAlien) {
-                // 圆形敌人未被击中，减分
-                score = max(score - 1, -99); // 确保分数不低于0
+                // alien未被击中，减分
+                score = max(score - 1, -99); // 最低-99
             } else if (enemies[i] instanceof EnemyDiamond) {
-                // 正方形敌人未被击中，增加分数
+                // diamond未被击中，加分
                 score++;
             }
             // 删除掉落的敌人
@@ -90,13 +90,12 @@ function draw() {
     drawScore();
 }
 
-// 显示得分的函数
+// 显示得分
 function drawScore() {
-    // 添加阴影效果
-    fill(0, 0, 0, 150); // 设置阴影颜色（黑色）
-    textSize(28); // 调整文本大小
+    fill(0, 0, 0, 150); 
+    textSize(28); 
     text("Score: " + score, 12, 34); // 阴影偏移位置
-    fill(255, 215, 0); // 设置得分颜色（金色）
+    fill(255, 215, 0); 
     text("Score: " + score, 10, 30); // 实际得分位置
 }
 
@@ -150,17 +149,17 @@ class Bullet {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.speed = -7.5; // 设置子弹速度
+        this.speed = -7.5; // 子弹速度
     }
 
 
     show() {
-        // 设置边框颜色和宽度
-        stroke(255, 255, 200); // 淡白色光边
-        strokeWeight(2); // 边框宽度
-        fill(255, 215, 0); // 金色填充
-        ellipse(this.x, this.y, 8, 12); // 调整子弹大小
-        noStroke(); // 不再绘制边框
+        //外观
+        stroke(255, 255, 200); 
+        strokeWeight(2); 
+        fill(255, 215, 0); 
+        ellipse(this.x, this.y, 8, 12); // 子弹大小
+        noStroke();
     }
 
 
@@ -175,7 +174,7 @@ class EnemyAlien {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.size = 55; // 设置外星人大小
+        this.size = 55; 
     }
 
     show() {
@@ -204,7 +203,7 @@ class EnemyDiamond {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.size = 60; // 设置钻石大小
+        this.size = 60; 
     }
 
     show() {

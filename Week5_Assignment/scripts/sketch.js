@@ -12,8 +12,8 @@ function setup() {
 //   canvas.parent('p5-canvas')
 let myCanvas = document.getElementById("myCanvas")
 createCanvas(windowWidth,windowHeight,myCanvas)
-  squareColor = color(random(255), random(255), random(255));
-  
+
+  squareColor = color(random(255), random(255), random(255));  
     // 设置定时器，每2秒生成一个新的小方块
   timerID = setInterval(() => {
     let newShape = {

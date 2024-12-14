@@ -1,13 +1,14 @@
-// 获取所有的按钮
-const buttons = document.querySelectorAll('.button img');
-const largeImage = document.getElementById('large-image');
+// 获取所有的缩略图
+let thumbnails = document.querySelectorAll('.thumbnail');
 
-// 为每个按钮添加点击事件
-buttons.forEach(button => {
-    button.addEventListener('click', function() {
-        // 获取图片的路径并设置到大图展示区域
-        const imageSrc = this.src;
-        largeImage.src = imageSrc; // 更新大图片的路径
+// 获取大图片展示区域
+let largeImage = document.getElementById('largeImage');
+
+// 为每个缩略图添加点击事件
+thumbnails.forEach(function(thumbnail) {
+    thumbnail.addEventListener('click', function() {
+        // 将大图片的src更新为点击的缩略图的src
+        largeImage.src = thumbnail.src;
         largeImage.style.display = 'block'; // 显示大图片
     });
 });

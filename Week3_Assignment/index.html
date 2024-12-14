@@ -1,65 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Make Buttons Do Stuff</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-
-
-    <body>
-        <header class="header">
-            <div class="logo">
-                <img src="images/pandadalogo.png" alt="Logo" height="50px"/>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Buttons Do Stuff</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/pandadalogo.png" alt="Logo" height="50px"/>
+        </div>
         <nav class="nav">
             <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center; align-items: center;">
-                <li style="margin: 0 10px;">
-                    <a href="#home">Home</a>
-                    </li>
-                <li style="margin: 0 10px;">
-                    <a href="#about">About</a>
-                    </li>
-                <li style="margin: 0 10px;">
-                    <a href="#services">Services</a>
-                    </li>
-                <li style="margin: 0 10px;">
-                     <a href="#contact">Contact</a>
-                    </li>
+                <li style="margin: 0 10px;"><a href="#home">Home</a></li>
+                <li style="margin: 0 10px;"><a href="#about">About</a></li>
+                <li style="margin: 0 10px;"><a href="#services">Services</a></li>
+                <li style="margin: 0 10px;"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        </header>
+    </header>
 
-        <main>
-            <div class="modebutton">
-                <button id="mode01" class="button">
-                    <img src="images/01.jpg" alt="mode01" styles="width: 80px; height: 80px;"/>
-                </button>
+    <main>
+        <div class="modebutton">
+            <button id="mode01" class="button">
+                <img src="images/01.jpg" alt="mode01" class="thumbnail" style="width: 80px; height: 80px;"/>
+            </button>
 
-                <button id="mode02" class="button">
-                    <img src="images/02.jpg" alt="mode02" styles="width: 80px; height: 80px;"/>
-                </button>
+            <button id="mode02" class="button">
+                <img src="images/02.jpg" alt="mode02" class="thumbnail" style="width: 80px; height: 80px;"/>
+            </button>
 
-                <button id="mode03" class="button">
-                    <img src="images/03.jpg" alt="mode03" styles="width: 80px; height: 80px;"/>
-                </button>
+            <button id="mode03" class="button">
+                <img src="images/03.jpg" alt="mode03" class="thumbnail" style="width: 80px; height: 80px;"/>
+            </button>
 
-                <button id="mode04" class="button">
-                    <img src="images/04.jpg" alt="mode04" styles="width: 80px; height: 80px;"/>
-                </button>
-            </div>
-            
-            
-            <div id="large-image-container" style="text-align: center; margin-top: 20px;">
-                <img id="large-image" src="" alt="Large Display" style="width: 400px; height: 400px; display: none;"/>
-            </div>
-        </main>
-    
-        <!-- 引入外部的 script.js 文件 -->
-        <script src="script.js"></script>
-    
-    </body>
+            <button id="mode04" class="button">
+                <img src="images/04.jpg" alt="mode04" class="thumbnail" style="width: 80px; height: 80px;"/>
+            </button>
+        </div>
 
+        <!-- 大图片展示区域 -->
+        <div id="large-image-container" style="text-align: center; margin-top: 20px;">
+            <img id="largeImage" src="" alt="Large Display" style="width: 400px; height: 400px; display: none;"/>
+        </div>
+    </main>
 
+    <!-- 引入外部的 script.js 文件 -->
+    <script src="script.js"></script>
+</body>
 </html>

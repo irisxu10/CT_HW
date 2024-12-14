@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .header {
@@ -8,7 +8,7 @@ body {
     justify-content: space-between; 
     align-items: center;
     background-color: #f1bdbd8d; 
-    padding: 6px 20px;          /* 内边距 前面是文字在栏目框内上下距离的内边距 后面是最左和最右 */
+    padding: 6px 20px;
 }
 
 .logo img {
@@ -16,63 +16,77 @@ body {
 }
 
 .nav ul {
-    list-style: none;            /* 去掉默认列表样式 */
-    margin: 0;                   /* 外边距 */
-    padding: 0;                  /* 内边距 */
-    display: flex;               /* Flexbox布局 */
+    list-style: none;            
+    margin: 0;                   
+    padding: 0;                  
+    display: flex;               
 }
 
 .nav li {
-    margin: 0 10px;              /* 选项之间的间距 */
+    margin: 0 10px;              
 }
 
 .nav a {
-    color: white;                /* 选项文本颜色 */
-    text-decoration: none;       /* 去掉下划线 */
-    padding: 5px 10px
+    color: white;                
+    text-decoration: none;       
+    padding: 5px 10px;
 }
 
-.nav a:hover {                      /* 悬停效果 */
+.nav a:hover {                      
     background-color: #c19898;      
-    border-radius: 5px;          /*悬停边框—圆角效果 */
+    border-radius: 5px;          
 }
 
-main{
-    display: flex;                /* 使用Flexbox布局 */
-    justify-content: center;      /* 水平居中 */
-    align-items: center;          /* 垂直居中 */
-    gap: 20px;                   /* 设置按钮之间的间距 */
-    margin-top: 10px;            /* 可选：顶部间距 */
-    height: 100px;               /* 可选：使main占满整个视口高度 */
+main {
+    display: flex;                
+    flex-direction: column;       /* 垂直排列 */
+    justify-content: center;      
+    align-items: center;         
+    margin-top: 10px;            
+    height: 100%;                 /* 使main占满整个视口高度 */
 }
 
-.modebutton{
+.modebutton {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-top: 10px;
+    margin-bottom: 20px;         /* 增加按钮和图片之间的间距 */
 }
 
 .button {
-    display: inline-block;       /* 确保按钮呈现为块状 */
-    width: 80px;               /* 设置按钮宽度 */
-    height: 80px;              /* 设置按钮高度 */
+    display: inline-block;       
+    width: 80px;               
+    height: 80px;              
     overflow: hidden;
     border: none;              
     background: none;           
     padding: 0;                 
-    cursor: pointer;            /* 鼠标悬停时显示手型 */
+    cursor: pointer;            
 }
 
-.button img{
-    width: 80px;                    /* 设置图片宽度为自动 */
-    height: 100%;                   /* 高度填满按钮 */
-    max-width: none;                /* 允许宽度超过按钮以实现等比例缩放 */
-    object-fit: cover;              /* 保持图片比例并填充 */
-    position: relative;             /* 为绝对定位做准备 */
-    left: 50%;                      /* 向右移动50% */
-    top: 50%;                       /* 向下移动50% */
-    transform: translate(-50%, -50%); /* 将中心移动到按钮中心 */
+.button img {
+    width: 80px;                   
+    height: 100%;                  
+    max-width: none;               
+    object-fit: cover;              
+    position: relative;             
+    left: 50%;                      
+    top: 50%;                       
+    transform: translate(-50%, -50%); 
 }
 
+/* 大图片展示区域 */
+#large-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;             /* 确保与按钮之间有间距 */
+}
+
+#largeImage {
+    width: 400px;
+    height: 400px;
+    display: none;                /* 默认隐藏 */
+    object-fit: cover;            /* 确保图片等比例缩放 */
+}

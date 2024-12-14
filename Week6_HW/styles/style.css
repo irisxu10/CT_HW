@@ -30,3 +30,23 @@ video {
 .logo img {
     height: 50px;
 }
+
+/* 按钮样式 */
+.play-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #f1bdbd8d;  /* 蓝色背景 */
+    color: white;               /* 白色文字 */
+    font-size: 18px;            /* 文字大小 */
+    text-decoration: none;      /* 去除下划线 */
+    border-radius: 10px;        /* 圆角效果 */
+    text-align: center;         /* 文字居中 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* 阴影效果 */
+    transition: background-color 0.3s, transform 0.2s; /* 动画效果 */
+}
+
+/* 鼠标悬停效果 */
+.play-button:hover {
+    background-color: #cf79ab;  /* 悬停时的颜色 */
+    transform: scale(1.1);      /* 悬停时放大按钮 */
+}

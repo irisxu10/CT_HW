@@ -3,9 +3,68 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>milti-channel controller</title>
+        <title>Milti-channel controller</title>
         <link rel="stylesheet" href="style.css">
+ 
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
 
+            header {
+                background: #333;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+
+            h2 {
+                font-size: 24px;
+                font-weight: normal;
+            }
+
+            h1 {
+                font-size: 28px;
+                margin-top: 20px;
+                font-weight: bold;
+            }
+
+            h2, h3 {
+                font-style: italic;
+            }
+
+            section#assignment {
+                padding: 20px;
+                margin: 0 auto;
+                max-width: 800px;
+                background: #fff;
+                margin-top: 20px;
+            }
+
+            div {
+                margin-bottom: 30px;
+            }
+
+            h3 {
+                font-size: 18px;
+                margin-top: 10px;
+                color: #333;
+            }
+
+            p {
+                color: #555;
+                font-size: 16px;
+                margin: 10px 0;
+            }
+        </style>
 
     </head>
 
@@ -21,16 +80,35 @@
 
             
             <section id="assignment">
-                <h1>Week10 Milti-Channel Controller and Building an interface</h1>
-                <h3>text.</h3>
+                <h1>Week10 Milti-Channel Controller</h1>
+                <h3>In this assignment I tried to use IR distance sensor as my sensor. the effect I wanted to achieve was to change the size of a red ball by detecting the distance through infrared.</h3>
 
 
-            <section id="process">
-
-                <h2>Process Description</h2>
-                <h3>text</h3>
+                <h2>Plan1</h2>
+                <h3>First I started by connecting the sensor to the breadboard with a black wire to the GROUND, a red one to the +, and a white wire to designate a connector.
+                    Then I first started to write the Arduino because I first needed to know that the sensor was able to receive in sending information.
+                    Then I started writing the Processing to put the data into the processing to reflect on a red ball.
+                    </h3>
+                <div style="text-align: center;">
+                    <img src="images/1.png" alt="Step1" style="width: 600px; height: auto;">
+                </div>
                 <video controls>
-                    <source src="videos/handpose.mp4" type="video/mp4">
+                    <source src="videos/monitor.mp4" type="video/mp4">
+                </video>
+
+                <h2>But! Nothing happened!!!</h2>
+                <h3>So I began the long search for my problem.
+                    First of all, I had the wrong interface, I tried the serial.list code to find my correct interface which is [4].
+                    Then secondly I was importing the wrong data, I tested again with the Arduino's serial monitor my data range was 1200-3000. </h3>
+                    <div style="text-align: center;">
+                        <img src="images/code.png" alt="Step1" style="width: 600px; height: auto;">
+                    </div>
+
+
+                <h2>Solve the final problem!</h2>
+                <h3>The last problem I found was with the print and println on top of the Arduino, as I had just written it wrong causing it to not really know how to log transferring my data. In my attempts to make changes to this section, I managed to get the ball to start changing size and also blink once per change!</h3>
+                <video controls>
+                    <source src="videos/2.mp4" type="video/mp4">
                 </video>
 
 

@@ -31,6 +31,14 @@ video {
     height: 50px;
 }
 
+/* 容器样式，使按钮平行排列 */
+.button-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    gap: 60px;               /* 设置按钮之间的间距 */
+    margin-top: 20px;        /* 可选：设置顶部间距 */
+}
+
 /* 按钮样式 */
 .play-button {
     display: inline-block;
@@ -50,3 +58,4 @@ video {
     background-color: #cf79ab;  /* 悬停时的颜色 */
     transform: scale(1.1);      /* 悬停时放大按钮 */
 }
+

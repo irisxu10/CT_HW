@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>P5.js_Time and Oscillation</title>
-        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="style.css">
         <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/p5.min.js"></script>
-        <script src="scripts/sketch.js"></script>
+        <script src="sketch.js"></script>
     </head>
 
     <body>
@@ -21,9 +21,12 @@
 
             
             <section id="assignment">
-                <h1>Week6 Interactive System with UI and Processes</h1>
-                <h3>I designed an alien shooting mini-game that contains a small spaceship that shoots bullets, enemies and gems. The player can move the small spaceship with the X axis of the mouse as well as use space to fire bullets.</h3>
-                <a href="https://editor.p5js.org/irisxu10/full/ozF8SiEgB" class="play-button" target="_blank">Play</a>
+                <h1>Week8 P5.js_Find Your Interface</h1>
+                <h3>For this week's assignment, I made some changes to the space design mini-game I designed the previous week. Changed from being controlled by the keyboard and mouse to being controlled by hand movements. I accomplished this by using hand pose in ML5.Js.</h3>
+                <div class="button-container">
+                    <a href="https://editor.p5js.org/irisxu10/full/YupWOW56q" class="play-button" target="_blank">Play Original Version</a>
+                    <a href="https://editor.p5js.org/irisxu10/full/ozF8SiEgB" class="play-button" target="_blank">Play Handpose Version</a>
+                </div>
             </section>
         
             <div>
@@ -33,9 +36,9 @@
             <section id="process">
 
                 <h2>Process Description</h2>
-                <h3>I ended up replacing the squares with gems, as well as replacing the circles with alien emoji.</h3>
+                <h3>First I tried the hand movements first, with the tip of the index finger as the control for the player to control the movement of the little flying machine, and the pinching of the index finger and thumb (when the distance reaches close enough) as the trigger to fire the bullet.</h3>
                 <video controls>
-                    <source src="videos/W5_5.mp4" type="video/mp4">
+                    <source src="videos/handpose.mp4" type="video/mp4">
                 </video>
 
 

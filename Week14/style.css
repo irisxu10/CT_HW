@@ -15,8 +15,23 @@ body {
 #assignment{
     margin-left: 30px;
     margin-right:30px;
-    width: 768px; /*调整宽度不会超过这个值*/
+    width: 900px; /*调整宽度不会超过这个值*/
 
+}
+
+/* 容器样式，确保图片并排显示 */
+.image-container {
+    display: flex;                    /* 使用Flexbox布局 */
+    justify-content: center;          /* 水平居中 */
+    align-items: center;              /* 垂直居中 */
+    gap: 20px;                        /* 设置图片之间的间距 */
+}
+
+/* 图片样式，使其成为正方形 */
+.square-image {
+    width: 300px;                     /* 设置图片宽度 */
+    height: 300px;                    /* 设置图片高度，使其成为正方形 */
+    object-fit: cover;                /* 确保图片等比缩放并填充区域 */
 }
 
 video {
@@ -26,6 +41,8 @@ video {
     display: block; /* 去除下方间隙 */
     margin: 0 auto; /* 居中显示 */
 }
+
+
 
 .logo img {
     height: 50px;

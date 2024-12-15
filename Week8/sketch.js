@@ -26,7 +26,8 @@ function gotHands(results) {
 }
 
 function setup() {
-    createCanvas(500, 800);
+    let myCanvas = document.getElementById("myCanvas")
+    createCanvas(windowWidth,windowHeight,myCanvas)
 
     // 初始化摄像头
     video = createCapture(VIDEO, { flipped: true });
